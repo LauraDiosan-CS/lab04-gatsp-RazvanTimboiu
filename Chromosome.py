@@ -39,12 +39,12 @@ class Chromosome:
 
     def mutate(self):
 
-        for _ in range(1, len(self.__genes) - 1):
+        #for _ in range(1, len(self.__genes) - 1):
 
-            chance = random()
-            if chance < self.__param['mutation_rate']:
-                one, two = generate_two(1, len(self.__genes) - 2)
-                self.__genes[one: two + 1] = self.__genes[one: two + 1][::-1]
+        chance = random()
+        if chance < self.__param['mutation_rate']:
+             one, two = generate_two(1, len(self.__genes) - 2)
+             self.__genes[one: two + 1] = self.__genes[one: two + 1][::-1]
 
 
     def __str__(self):
